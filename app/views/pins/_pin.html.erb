@@ -1,0 +1,49 @@
+<div class="box">
+  <%= link_to (image_tag pin.image(:medium)), pin %>
+<br>
+<p class="主題">
+    <b><font size="2"><%= truncate(pin.name, :length => 30) %></h6> </font></b>
+</p>
+
+<p class="出貨日期">
+ <font size="1"> <%= truncate(pin.description, :length => 60)  %></font>
+</p>
+
+<p>
+    <strong>
+        <b>Posted by </b> <%= link_to pin.user.name, pin.user %>
+    </strong>
+</p>
+
+<% if current_user == pin.user %>
+
+<%= link_to '編輯', edit_pin_path(pin) %>
+<%= link_to '刪除', pin, method: :delete, data: { confirm: '你確定嗎?' } %>
+
+   <% if pin.yt_video_id.present? %>
+   <i class="icon-facetime-video"></i> 
+   <% else %>
+   <% end %>
+
+  <% if pin.instaid.present? %>
+ <i class="icon-camera"></i> 
+   <% else %>
+   <% end %>
+
+    <% if pin.instapid.present? %>
+ <i class="icon-camera"></i> 
+   <% else %>
+   <% end %>
+
+
+
+<% else %>
+
+
+<% if pin.yt_video_id.present? %>
+   <i class="icon-facetime-video"></i> 
+   <% else %>
+   <% end %>
+<% end %>
+
+</div>

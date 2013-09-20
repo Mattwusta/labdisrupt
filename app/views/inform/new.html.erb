@@ -1,0 +1,65 @@
+<center><div class="page-header">
+    <font color="gray" size ="6" face = "Baskerville Old Face">。
+ </font> </font>
+<% if user_signed_in? %>
+
+<% else %>
+    
+          <font color = "white" style="padding-left:60px;" > <%= link_to 'Get Cooking', new_user_registration_path, class: "btn btn-large
+   btn-primary" %></font>
+
+<% end %>
+  </div>
+  </center>
+
+<center><%=image_tag("how1.png", alt: "charity", :size => '1200x250')%></center>
+<hr>
+
+<%= form_for @order, :url => inform_path do |form| %>
+  <fieldset class="fields">
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, :placeholder => "曾愛慈：建議與付款帳號相同..." %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email, :placeholder => "Jean@gmail.com..." %>
+    </div>
+
+       <div class="field">
+      <%= form.label :number %>
+      <%= form.text_field :number, :placeholder => "手機聯絡號碼..." %>
+    </div>
+    
+    <div class="field">
+      <%= form.label :item %>
+     <%= form.text_area :item, :placeholder => "欲購買餐點＋數量（每份＄299）如: 紅酒墩牛肉 (2份) ＋ 義大利肉醬(3份）...", :class   => "span6", rows: "2", input_html: { :class => "span6", rows: "10"}  %>
+    </div>
+
+    <div class="field">
+      <%= form.label :address %>
+     <%= form.text_area :address, :placeholder => "收貨地址: 106台北市大安區...", :class   => "span6", rows: "2", input_html: { :class => "span6", rows: "10"}  %>
+    </div>
+
+     <div class="field">
+      <%= form.label :time %>
+      <%= form.text_field :time, :placeholder => "收貨時間： 下午 2:00 ～ 6:00" %>
+    </div>
+    
+    <div class="field">
+     <%= form.label :special %> 
+      <%= form.text_area :special, :placeholder => "請將您的特別需求填入： 對花生過敏，不吃海鮮等...", :class   => "span6", rows: "5", input_html: { :class => "span6", rows: "10"}  %>
+
+      <div> 匯款銀行 － 國泰世華銀行
+      
+    </div>
+  </fieldset>
+  
+  <fieldset class="form-actions">
+    <%= form.submit "送出訂單", class: "btn btn-primary" %>
+  
+  </div>
+
+  </fieldset>
+<% end %>

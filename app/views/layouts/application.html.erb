@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <%= @fblike %>
+  <% if content_for?(:head) %>
+    <%= yield(:head) %>
+  <% end %>
+
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
+  <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
+</head>
+  
+<body>
+  <%= render 'layouts/header' %>
+    <div class="container">
+      <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+<% end %>
+
+<%= yield %>
+    <%= render 'layouts/footer' %>
+      </div>
+</body>
+  <hr>
+  
+
+<body>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=423703477734650";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">stLight.options({publisher: "3d6bd212-1a1c-4bf7-9f1c-7154d13f873d", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+<script>
+var options={ "publisher": "3d6bd212-1a1c-4bf7-9f1c-7154d13f873d", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "linkedin", "pinterest", "email", "googleplus", "baidu", "sharethis"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+<br>
+
+
+<div class="page-header">
+  <div class="navbar navbar-fixed-bottom">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+         <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+</a>
+
+<div class="nav-collapse">
+  <ul class="nav"> 
+    <li><%= link_to "Starsworthy 值顆星 powered by lab DISRUPT Copyright 2013", contact_path%></li>
+  </ul>
+
+  <ul class="nav pull-right">
+    <li><%= link_to "聯絡", contact_path %></li>         
+      <li><%= link_to "服務條款", service_path %></li>
+        <li><%= link_to "隱私權政策", privacy_path %></li>
+      </div> 
+    </div>
+  </div>
+</html>
+

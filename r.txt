@@ -1,0 +1,39 @@
+              home_index GET    /home/index(.:format)          home#index
+                    pins GET    /pins(.:format)                pins#index
+                         POST   /pins(.:format)                pins#create
+                 new_pin GET    /pins/new(.:format)            pins#new
+                edit_pin GET    /pins/:id/edit(.:format)       pins#edit
+                     pin GET    /pins/:id(.:format)            pins#show
+                         PUT    /pins/:id(.:format)            pins#update
+                         DELETE /pins/:id(.:format)            pins#destroy
+               pin_index GET    /pin(.:format)                 pin#index
+                         POST   /pin(.:format)                 pin#create
+                         GET    /pin/new(.:format)             pin#new
+                         GET    /pin/:id/edit(.:format)        pin#edit
+                         GET    /pin/:id(.:format)             pin#show
+                         PUT    /pin/:id(.:format)             pin#update
+                         DELETE /pin/:id(.:format)             pin#destroy
+        new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
+            user_session POST   /users/sign_in(.:format)       devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
+           user_password POST   /users/password(.:format)      devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)  devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format) devise/passwords#edit
+                         PUT    /users/password(.:format)      devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)        devise/registrations#cancel
+       user_registration POST   /users(.:format)               devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)       devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)          devise/registrations#edit
+                         PUT    /users(.:format)               devise/registrations#update
+                         DELETE /users(.:format)               devise/registrations#destroy
+                    user        /users/:id(.:format)           users#show
+                    root        /                              pins#index
+                   about GET    /about(.:format)               pages#about
+                  weekly GET    /weekly(.:format)              pages#weekly
+                    shop GET    /shop(.:format)                pages#shop
+                 service GET    /service(.:format)             pages#service
+                 privacy GET    /privacy(.:format)             pages#privacy
+                    test GET    /test(.:format)                pages#test
+                recipies GET    /recipies(.:format)            pages@recipies#recipies
+                 contact GET    /contact(.:format)             contact#new
+                 contact POST   /contact(.:format)             contact#create

@@ -1,0 +1,44 @@
+<center><div class="page-header">
+    <font color="gray" size ="6" face = "Baskerville Old Face">請寫给我們, 我們就是來為您服務的!</font>
+          <% if user_signed_in? %>
+
+<% else %>
+        </font>
+          <font color = "white" style="padding-left:60px;" > <%= link_to 'Get Cooking', new_user_registration_path, class: "btn btn-large
+   btn-primary" %></font>
+
+<% end %>
+        </font>
+
+  </center>
+
+
+<%= form_for @message, :url => contact_path do |form| %>
+  <fieldset class="fields">
+    <div class="field"><%= form.label :name %>
+      <%= form.text_field :name, :placeholder => "姓名" %>
+    </div>
+    
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email, :placeholder => "EMAIL" %>
+    </div>
+    <div class="field">
+      <%= form.label :subject %>
+      <%= form.text_field :subject, :placeholder => "主題" %>
+    </div>
+    
+    <div class="field">
+      <%= form.label :body %>
+      <%= form.text_area :body, :placeholder => "請輸入細節...", :class   => "span10", rows: "5", input_html: { :class => "span6", rows: "10"}  %>
+      
+    </div>
+  </fieldset>
+  
+  <fieldset class="form-actions">
+    <%= form.submit "Send", class: "btn btn-primary" %>
+  
+  </div>
+
+  </fieldset>
+<% end %>

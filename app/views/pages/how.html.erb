@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% content_for :head do %>
+    <meta property="fb:app_id"          content="479820998782220" /> 
+    <meta property="og:type"            content="website" /> 
+    <meta property="og:url"             content="http://www.chef29.com/how" /> 
+    <meta property="og:title"           content="Chef29 今晚大廚-如何購買" /> 
+    <meta property="og:description"     content="Chef29今晚大廚每週提供不同菜色供選擇，為您準備食譜，購買食材，分裝好送到您府上。" /> 
+    <meta property="og:image"           content="http://farm4.staticflickr.com/3666/9783210552_31c4c07975_o.jpg" /> 
+<% end %>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+	</head>
+
+
+<center><div class="page-header">
+
+     <font color="gray" size ="6" face = "Baskerville Old Face">發現，學習，體驗，享受，吸收，分享它...</font>
+        <% if user_signed_in? %>
+
+<% else %>
+        </font>
+          <font color = "white" style="padding-left:60px;" > <%= link_to '註冊', new_user_registration_path, class: "btn btn-large
+   btn-primary" %></font>
+
+<% end %>
+<hr>
+<% if user_signed_in? %>
+  <center><i><font color = "white" > <%= link_to '買 1 捐 1',inform_path, class: "btn btn-large btn-success" %></font></i></center>
+<% else %>
+      
+<% end %>
+</center>
+
+<center><%=image_tag("ing.png", alt: "charity", :size => '800x250')%></center>
+
+<hr>
+
+<%=image_tag("how1.png", alt: "charity", :size => '1200x490')%>
+
+<hr>
+
+<center><font color = "gray" size ="6" face = "Baskerville Old Face"> THIS IS NOT JUST A MEAL, IT'S A JOURNEY OF LEARNING </font></center>
+
+<center><i><font color = "gray" size ="4" face = "Baskerville Old Face" >不僅是吃頓飯，這是一輩子學習的旅程。</font></i></center>
+
+<hr>
+<%=image_tag("how2.png", alt: "charity", :size => '1200x490')%>
+<hr>
+
+<center><font color = "gray" size ="6" face = "Baskerville Old Face"> 餐點訂單 </font></center>
+<center><i><font color = "gray" size ="4" face = "Baskerville Old Face" >請將你要購買的餐點詳細填入後送出,</font></i></center>
+
+<hr>
+<%=image_tag("how4.png", alt: "charity", :size => '1200x490')%>
+<hr>
+
+<center><font color = "gray" size ="6" face = "Baskerville Old Face"> 付款帳號 </font></center>
+<center><i><font color = "gray" size ="4" face = "Baskerville Old Face" >請在出貨日前禮拜五下午3點30分前完成付款,</font></i></center>
+<hr>
+
+<%=image_tag("how5.png", alt: "charity", :size => '1200x490')%>
+<hr>
+
+<center><font color = "gray" size ="6" face = "Baskerville Old Face"> 取消訂單</font></center>
+<center><i><font color = "gray" size ="4" face = "Baskerville Old Face" >您可在購買截止(出貨前禮拜五中午之前)取消訂單,</font></i></center>
+<hr>
+
+<%=image_tag("how6.png", alt: "charity", :size => '1200x490')%>
+<hr>
+
+<center><font color = "gray" size ="6" face = "Baskerville Old Face">請多多包涵</font></center>
+<center><i><font color = "gray" size ="4" face = "Baskerville Old Face" >Chef29 將會不斷的簡單化購買流程, 希望各位能有個愉快的經驗。</font></i></center>
+
+
+<script>
+var options={ "publisher": "3d6bd212-1a1c-4bf7-9f1c-7154d13f873d", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "linkedin", "pinterest", "email", "googleplus", "blogger", "wordpress", "baidu"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+</html>

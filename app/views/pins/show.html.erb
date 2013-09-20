@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <% content_for :head do %>
+    <meta property="fb:app_id"          content="423703477734650" /> 
+    <meta property="og:type"            content="Starsworthy:post" /> 
+    <meta property="og:url"             content='<% "http://starsworthy.herokuapp.com/" + pin_path(@pin) %>' /> 
+    <meta property="og:description" content='<%= @pin.description %>' />
+    <meta property="og:title" content='<%= @pin.name %>' />
+    <meta property="og:image" content='<%= @pin.image %>' />
+   
+
+  <% end %>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+</head>
+
+<div class="row">
+    <div class="span8 offset2">
+        <div class="well">
+
+   <center> <%= image_tag @pin.image%> </center>
+
+<% if @pin.yt_video_id.present? %>
+    <hr>
+   <center>  <div class="flex-video widescreen"><iframe width="600" height="350" src="//www.youtube.com/embed/<%= @pin.yt_video_id %>"frameborder=”0″ allowfullscreen></iframe></center>
+  <% else %>
+<% end %>
+  
+<% if @pin.instapid.present? %>
+  <hr>
+   <center><div class="flex-instagram widescreen"><iframe src="//instagram.com/p/<%= @pin.instapid %>" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe></center>
+  <% else %>
+<% end %>
+
+<% if @pin.instaid.present? %>
+  <hr>
+   <center><div class="flex-instagram widescreen"><iframe src="//instagram.com/p/<%= @pin.instaid %>" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe></center>
+  <% else %>
+<% end %>
+
+<p><b><h3><%= @pin.name %></h3></b>  </b></p> 
+  <hr>  
+<p> <font size="3"><%= simple_format(@pin.description) %></font></p>
+  <hr>
+<p><b>Posted By </b> <%= @pin.user.name %>
+<br>
+<%= @pin.created_at%></p>
+
+<% if current_user == @pin.user %>
+  <%= link_to '編輯', edit_pin_path(@pin) %>
+
+<% end %>
+   
+  <%= link_to '上一頁', pins_path %>
+        </a>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'starsworthy'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+   
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=423703477734650";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+
+

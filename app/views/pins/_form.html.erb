@@ -1,0 +1,19 @@
+<%= simple_form_for(@pin, html: { class: "form-horizontal"}) do |f| %>
+  <%= f.error_notification %>
+  <%= f.full_error :image_file_size, class: "alert alert-error" %>
+  <%= f.full_error :image_content_type, class: "alert alert-error" %>
+  
+  <%= f.input :image, label: "上傳圖片" %>
+  <%= f.input :image_remote_url, label: "或輸入URL連結", as: :text, input_html: { :class => "span4", rows: "1" } %>
+  <%= f.input :yt_video_id, label: "輸入Youtube ID", as: :text, input_html: { :class => "span4", rows: "1", :placeholder => "youtu.be/Iz_kTGXd90w (Iz_kTGXd90w)－就是影片ID"} %>
+<%= f.input :instapid, label: "輸入Instagram相片－PID/embed/", as: :text, input_html: { :class => "span4", rows: "2", :placeholder => "//instagram.com/p/eMSpPKP9cF/embed/        (eMSpPKP9cF/embed/) － 就是相片 PID/embed/"} %>
+  <%= f.input :instaid, label: "輸入Instagram影片 ID/embed/", as: :text, input_html: { :class => "span4", rows: "2", :placeholder => "//instagram.com/p/b-oOubP9cZ/embed/        (b-oOubP9cZ/embed/)－ 就是Instagram影片 ID/embed/"} %>
+  <%= f.input :name, label: "主題", as: :text, input_html: { :class => "span4", rows: "1" }%>
+  
+  <%= f.input :description, label: "內容", as: :text, input_html: { :class => "span6", rows: "10" } %>
+ 
+ 
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+  </div>
+<% end %>

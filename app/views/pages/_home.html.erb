@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<font color="#5CA5FF" size ="6" face = "Baskerville Old Face">
+<center><div class="page-header">
+ <font color="gray" size ="6" face = "Baskerville Old Face">Join Chef Daniel To Chase Taiwan's <font color="#5CA5FF" size ="6" face = "Baskerville Old Face"> StarsWorthy</font> Fine Dining & Liquor.</font>
+
+<% if user_signed_in? %>
+
+<% else %>
+          <font color = "white" style="padding-left:60px;" > <%= link_to '註冊', new_user_registration_path, class: "btn btn-large
+   btn-primary" %></font>
+
+<% end %>
+        </font>
+      </i>
+    </h1>
+  </center>
+
+<% unless user_signed_in? %>
+ <head>
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+
+<% content_for :head do %>
+    <meta property="fb:app_id"          content="423703477734650" /> 
+    <meta property="og:type"            content="website" /> 
+    <meta property="og:url"             content="http://Starsworthy.herokuapp.com" /> 
+    <meta property="og:title"           content="StarsWorthy 值顆星" /><meta property="og:description"     content="跟StarsWorthy 值顆星 一起探索台灣美食與美酒，您會给他們幾棵星的等級呢？。" /> 
+    <meta property="og:image"           content="http://farm3.staticflickr.com/2880/9813962814_5884ab1972_o.jpg" /> 
+<% end %>
+
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
+    <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
+
+</head>
+
+<body>
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=423703477734650";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="center hero-unit">
+  <div id="myCarousel" class="carousel slide">
+   <ol class="carousel-indicators"></ol>
+  <!-- Carousel items -->
+
+  <div class="carousel-inner">
+  <div class="active item"><a href="" title="Flickr 上 mattwusta 的 1"><img src="http://farm4.staticflickr.com/3742/9813247616_7b8aee3cde_o.png" width="1400" height="300" alt="1"></a></div>
+
+  <div class="item"><a href="" title="Flickr 上 mattwusta 的 2"><img src="http://farm4.staticflickr.com/3755/9813217965_40fb4366af_o.png" width="1400" height="299" alt="2"></a></div>
+
+    <div class="item"><a href="" title="Flickr 上 mattwusta 的 3"><img src="http://farm4.staticflickr.com/3766/9813247406_bd3be34908_o.png" width="1400" height="450" alt="3"></a></div>
+
+    <div class="item"><a href="" title="Flickr 上 mattwusta 的 4"><img src="http://farm6.staticflickr.com/5477/9813216725_7be0753148_o.png" width="1400" height="450" alt="4"></a></div>
+
+    <div class="item"><a href="" title="Flickr 上 mattwusta 的 5"><img src="http://farm4.staticflickr.com/3767/9813297463_5a4159bb2b_o.png" width="1400" height="450" alt="5"></a></div>
+
+    <div class="item"><a href="" title="Flickr 上 mattwusta 的 6"><img src="http://farm3.staticflickr.com/2886/9813219664_5bacbcce22_o.png" width="1400" height="390" alt="6"></a></div>
+
+    <div class="item"><a href="" title="Flickr 上 mattwusta 的 7"><img src="http://farm8.staticflickr.com/7331/9813215475_e752d69e6e_o.png" width="1400" height="480" alt="7"></a></div>
+
+    <div class="item"><a href="" title="Flickr 上 mattwusta 的 8"><img src="http://farm8.staticflickr.com/7350/9813244696_f78bca530a_o.png" width="1400" height="480" alt="8"></a></div>
+
+  </div>
+  <!-- Carousel nav -->
+ 
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
+
+
+<p> 
+ <font color = "white"> <%= link_to '註冊 ', new_user_registration_path, class: "btn btn-large btn-primary" %></font>
+</p>
+<div class="fb-like" data-href="http://starsworthy.herokuapp.com" data-width="450" data-show-faces="true" data-send="true"></div>
+</div>
+<% end %>
+</body>
+
+<% if user_signed_in? %>
+ 
+ <% else %>
+  <form style="#ccc;padding:3px;text-align:center;" action="https://tinyletter.com/Starsworthy" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/starsworthy', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><label for="tlemail"> <font  size="5" face = "Baskerville Old Face"></font></label><input type="text" style="width:250px" name="email" id="tlemail" placeholder="訂閱StarsWorthy: 大廚送好料食譜給您！" /></p><input type="hidden" value="1" name="embed"/><a href="https://tinyletter.com" target="_blank"></a></p></form>
+ <% end %>
+  
+<% if user_signed_in? %>
+  <% else %>
+    <hr>
+  <% end %>
+
+</html>

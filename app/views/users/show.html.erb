@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<% content_for :head do %>
+    <meta property="fb:app_id"          content="423703477734650" /> 
+    <meta property="og:type"            content="website" /> 
+    <meta property="og:url"             content="http://xplore.com" /> 
+    <meta property="og:title"           content="Xplore Taiwan 探索台灣" />
+    <meta property="og:description"     content="Xplore 探索台灣美食與美酒 " /> 
+    <meta property="og:image"           content="http://farm8.staticflickr.com/7388/9783166784_41ef8c5bf7_o.jpg" /> 
+<% end %>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+</head>
+
+
+<h1><%= @user.name %></h1>
+
+<div id="pins">
+  <%= render @pins %>
+</div>
+
+<%= will_paginate @pins %>
+<script type="text/javascript">stLight.options({publisher: "3d6bd212-1a1c-4bf7-9f1c-7154d13f873d", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+<script>
+var options={ "publisher": "3d6bd212-1a1c-4bf7-9f1c-7154d13f873d", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "linkedin", "pinterest", "email", "googleplus", "blogger", "wordpress", "baidu"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+</html>
