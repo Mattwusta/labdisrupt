@@ -44,7 +44,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=423703477734650";
+  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=162938820570764";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -77,7 +77,7 @@
 <p> 
  <font color = "white"> <%= link_to '註冊 ', new_user_registration_path, class: "btn btn-large btn-primary" %></font>
 </p>
-<div class="fb-like" data-href="http://starsworthy.herokuapp.com" data-width="450" data-show-faces="true" data-send="true"></div>
+<div class="fb-like" data-href="http://labdisrupt.herokuapp.com" data-width="450" data-show-faces="true" data-send="true"></div>
 </div>
 <% end %>
 </body>
@@ -85,7 +85,7 @@
 <% if user_signed_in? %>
  
  <% else %>
-  <form style="#ccc;padding:3px;text-align:center;" action="https://tinyletter.com/Starsworthy" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/starsworthy', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><label for="tlemail"> <font  size="5" face = "Baskerville Old Face"></font></label><input type="text" style="width:250px" name="email" id="tlemail" placeholder="訂閱StarsWorthy: 大廚送好料食譜給您！" /></p><input type="hidden" value="1" name="embed"/><a href="https://tinyletter.com" target="_blank"></a></p></form>
+  <form style="#ccc;padding:3px;text-align:center;" action="https://tinyletter.com/labdisrupt" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/starsworthy', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><label for="tlemail"> <font  size="5" face = "Baskerville Old Face"></font></label><input type="text" style="width:280px" name="email" id="tlemail" placeholder="訂閱lab DISRUPT: 關於科技，創業的最新消息！" /></p><input type="hidden" value="1" name="embed"/><a href="https://tinyletter.com" target="_blank"></a></p></form>
  <% end %>
   
 <% if user_signed_in? %>
