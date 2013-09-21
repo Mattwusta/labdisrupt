@@ -114,3 +114,30 @@ color: gray;
 @media only screen and (max-device-width: 612px), only screen and (device-width: 612px) and (device-height: 712px), only screen and (width: 612px) and (orientation: landscape), only screen and (device-width: 612px), only screen and (max-width: 612px) {
   .flex-instagram { padding-top: 30; }
 }
+
+
+.flex-ad {
+  position: relative;
+  padding-top: 0px;
+  padding-bottom:0px;
+  height: 0px;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+ 
+.flex-ad.widescreen { padding-bottom: 500px; }
+.flex-ad.vimeo { padding-top: 0; }
+ 
+.flex-ad iframe,
+.flex-ad object,
+.flex-ad embed {
+  position: center;
+  top: 0;
+  right: 50px;
+  left: 50px;
+  width: 82%;
+  height: 95%;
+}
+@media only screen and (max-device-width: 612px), only screen and (device-width: 612px) and (device-height: 712px), only screen and (width: 612px) and (orientation: landscape), only screen and (device-width: 612px), only screen and (max-width: 612px) {
+  .flex-ad { padding-top: 30; }
+}
