@@ -67,13 +67,13 @@ color: gray;
 .flex-video {
   position: relative;
   padding-top: 25px;
-  padding-bottom: 75.5%;
+  padding-bottom: 67.5%;
   height: 0;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
   overflow: hidden;
 }
  
-.flex-video.widescreen { padding-bottom: 65.25%; }
+.flex-video.widescreen { padding-bottom: 57.25%; }
 .flex-video.vimeo { padding-top: 0; }
  
 .flex-video iframe,
