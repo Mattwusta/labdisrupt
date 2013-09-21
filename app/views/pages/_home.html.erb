@@ -18,9 +18,9 @@
 
 <% unless user_signed_in? %>
  <head>
-  <script type="text/javascript">var switchTo5x=true;</script>
-  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-  <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 
 <% content_for :head do %>
     <meta property="fb:app_id"          content="162938820570764" /> 
@@ -29,12 +29,9 @@
     <meta property="og:title"           content="labDISRUPT" /><meta property="og:description"     content="lab DISRUPT - 给所有科技，網路，商業，創業中朋友的網站。 A site for Tech, Business & Entrepreneurs." /> 
     <meta property="og:image"           content="http://farm8.staticflickr.com/7325/9846289694_cefa43521b_o.png" /> 
     <meta property="og:video"           content="http://vimeo.com/59633566" /> 
-    <meta property="og:video:secure_url" 
-          content="http://vimeo.com/59633566">
     <meta property="og:video:height" content="640">
     <meta property="og:video:width"  content="385">
-   
-    <meta property="og:video:type"   content="video/mp4">    
+      
     <meta property="og:video:type"   content="lab DISRUPT intro"> 
 <% end %>
 
@@ -110,5 +107,11 @@
   ga('create', 'UA-44224325-1', 'labdisrupt.herokuapp.com');
   ga('send', 'pageview');
 
+</script>
+
+<script type="text/javascript">stLight.options({publisher: "3d6bd212-1a1c-4bf7-9f1c-7154d13f873d", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+<script>
+var options={ "publisher": "3d6bd212-1a1c-4bf7-9f1c-7154d13f873d", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "linkedin", "pinterest", "googleplus", "email", "baidu", "sharethis"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 </script>
 </html>
