@@ -6,7 +6,7 @@
   <% if content_for?(:head) %>
     <%= yield(:head) %>
   <% end %>
-
+  <title>lab DISRUPT - 為人類更美好的未來，破壞式的創新，一個有關科技，新創事業，創業的網站!</title>
   <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -45,30 +45,44 @@ var options={ "publisher": "3d6bd212-1a1c-4bf7-9f1c-7154d13f873d", "position": "
 var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 </script>
 <br>
+<div class="row-fluid">
+        <div class="span4" style="border-right: 1px solid #ccc; "><font size = "5"><center><b><%= link_to "lab DISRUPT",'http://labdisrupt.herokuapp.com', {:style => 'color: #8c8c8c'}%></b></font>
+            <br><br>
+            <%= link_to "NewzWorthy 值得新聞",'http://newzworthy.herokuapp.com', {:style => 'color: #8c8c8c'}%>
+            <br><br>
+             <%= link_to "StarsWorthy 值棵星",'http://starsWorthy.herokuapp.com', {:style => 'color: #8c8c8c'}%>
+             <br><br>
+              <%= link_to "Chef29 今晚大廚",'http://www.chef29.com', {:style => 'color: #8c8c8c'}%>
+             <br><br>
+               <%= link_to "Guru$大師 - video",'https://vimeo.com/59646203', {:style => 'color: #8c8c8c'}%>
+             <br><br>
+               <%= link_to "VOYAGE TAIWAN - video",'http://www.youtube.com/watch?v=DI4Z9x9nW6w', {:style => 'color: #8c8c8c'}%>
+               <br></center>
+          </div>
+
+<div class="span4"style="border-right: 1px solid #ccc;" ><center> <%= link_to "",'http://www.youtube.com/watch?v=DI4Z9x9nW6w', {:style => 'color: #8c8c8c'}%>
+            
+             <br><br>
+            <p><b><font size="6" color="#4D90FE">訂閱 lab DISRUPT</font><P>
+            <p><font size="2" color="#4D90FE">有關科技，商業，創業的最新訊息</P>
+            <br>
+              <form style="#4D90FE;padding:3px;text-align:center;" action="https://tinyletter.com/newzworthy" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/newzworthy', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><label for="tlemail"> <font  size="5" face = "Baskerville Old Face"></font></label><input type="text" style="width:200px color=#4D90FE border-color=#4D90FE" name="email" id="tlemail" placeholder="Your EMAIL here!!" /></p><input type="hidden" value="1" name="embed"/><a href="https://tinyletter.com" target="_blank"></a></p></form>
+              <br>
+               
+            </div>
 
 
-<div class="page-header">
-  <div class="navbar navbar-fixed-bottom">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-         <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-</a>
-
-<div class="nav-collapse">
-  <ul class="nav"> 
-    <li><%= link_to "lab DISRUPT Copyright 2013", contact_path%></li>
-  </ul>
-
-  <ul class="nav pull-right">
-    <li><%= link_to "聯絡", contact_path %></li>         
-      <li><%= link_to "服務條款", service_path %></li>
-        <li><%= link_to "隱私權政策", privacy_path %></li>
-      </div> 
-    </div>
-  </div>
+          <div class="span4"><center><%= link_to "",'http://www.youtube.com/watch?v=DI4Z9x9nW6w', {:style => 'color: #8c8c8c'}%>
+            
+             <br><br>
+           <font size="4"> <%= link_to "Contact Us 聯絡我們",contact_path, {:style => 'color: #8c8c8c'}%></font>
+            <br><br><br>
+             <font size="4"> <%= link_to "Service 服務條款",service_path, {:style => 'color: #8c8c8c'}%></font>
+             <br><br><br>
+              <font size="4"><%= link_to "Privacy 隱私權政策",privacy_path, {:style => 'color: #8c8c8c'}%></font>
+            </center>
+             </div>
+          
 
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
