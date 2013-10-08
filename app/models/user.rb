@@ -28,4 +28,3 @@ class User < ActiveRecord::Base extend FriendlyId
     end
     user
   end
-end
