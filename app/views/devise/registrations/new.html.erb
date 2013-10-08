@@ -14,6 +14,7 @@
   	<%= f.input :name, :required => true, :autofocus => true %>
     <%= f.input :email, :required => true, :autofocus => true %>
     <%= f.input :password, :required => true %>
+    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
   
   </div>
 

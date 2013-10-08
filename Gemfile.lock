@@ -68,15 +68,21 @@ GEM
     facebook_share (0.0.6)
     faker (1.1.2)
       i18n (~> 0.5)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
     friendly_id (4.0.10.1)
       activerecord (>= 3.0, < 4.0)
+    hashie (2.0.5)
     hike (1.2.3)
+    httpauth (0.2.0)
     i18n (0.6.5)
     journey (1.0.4)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
+    jwt (0.1.8)
+      multi_json (>= 1.5)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -86,7 +92,22 @@ GEM
     mocha (0.14.0)
       metaclass (~> 0.0.1)
     multi_json (1.8.0)
+    multipart-post (1.2.0)
     nokogiri (1.5.10)
+    oauth2 (0.8.1)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-facebook (1.4.1)
+      omniauth-oauth2 (~> 1.1.0)
+    omniauth-oauth2 (1.1.1)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
     open-meta-tags (0.4.0)
     orm_adapter (0.4.0)
     paperclip (3.5.1)
@@ -169,6 +190,8 @@ DEPENDENCIES
   jcountdown-rails!
   jquery-rails
   mocha
+  omniauth
+  omniauth-facebook
   open-meta-tags
   paperclip (~> 3.0)
   pg

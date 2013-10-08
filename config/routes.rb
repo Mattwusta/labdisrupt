@@ -6,7 +6,7 @@ Dine::Application.routes.draw do
   resources :pins
   resources :pin 
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   match 'users/:id' => 'users#show', as: :user
 
   root :to => 'pins#index'
