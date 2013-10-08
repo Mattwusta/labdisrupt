@@ -190,6 +190,7 @@ DEPENDENCIES
   jcountdown-rails!
   jquery-rails
   mocha
+  oauth2
   omniauth
   omniauth-facebook
   open-meta-tags
