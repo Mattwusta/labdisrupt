@@ -22,7 +22,7 @@ gem 'jcountdown-rails', :git => 'http://github.com/rezwyi/jcountdown-rails.git'
 gem 'open-meta-tags', :require => 'open_meta_tags'
 gem 'pin_it'
 gem 'omniauth'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '1.4.0'
 gem 'oauth2'
 
 

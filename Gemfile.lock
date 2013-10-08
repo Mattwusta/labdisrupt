@@ -91,7 +91,7 @@ GEM
     mime-types (1.25)
     mocha (0.14.0)
       metaclass (~> 0.0.1)
-    multi_json (1.8.0)
+    multi_json (1.8.1)
     multipart-post (1.2.0)
     nokogiri (1.5.10)
     oauth2 (0.8.1)
@@ -103,9 +103,9 @@ GEM
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
       rack
-    omniauth-facebook (1.4.1)
-      omniauth-oauth2 (~> 1.1.0)
-    omniauth-oauth2 (1.1.1)
+    omniauth-facebook (1.4.0)
+      omniauth-oauth2 (~> 1.0.2)
+    omniauth-oauth2 (1.0.3)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
     open-meta-tags (0.4.0)
@@ -192,7 +192,7 @@ DEPENDENCIES
   mocha
   oauth2
   omniauth
-  omniauth-facebook
+  omniauth-facebook (= 1.4.0)
   open-meta-tags
   paperclip (~> 3.0)
   pg
