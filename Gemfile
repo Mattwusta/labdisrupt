@@ -23,7 +23,7 @@ gem 'open-meta-tags', :require => 'open_meta_tags'
 gem 'pin_it'
 gem 'omniauth'
 gem 'omniauth-facebook'
-
+gem 'oauth2'
 
 
 
